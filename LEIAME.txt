@@ -1,0 +1,6 @@
+O programa tem como objetivo implementar o algoritmo QR e plotar gráficos para a análise de deslocamento de sistemas massa mola
+Ele foi escrito na linguagem Python, versão 3.9.1
+
+As bibliotecas utilizadas são:
+1. Numpy
+2. Matplotlib.pyplot
