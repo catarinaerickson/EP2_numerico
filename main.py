@@ -185,7 +185,7 @@ def select_freq(v_autovalor, mat_autovetor, dg_M):
         freq_v = np.append(freq_v, freq)
 
         # Calcula o vetor k do modo de vibração multiplicando cada valor i da diagonal da matriz M(-1/2) 
-        # por cada valor i do autovetor (multiplicação de M(-1/2) à direita)
+        # por cada valor i do autovetor (multiplicação de M(-1/2) à esquerda)
         for i in range(dg_M.shape[0]):
             lmb_v_sorted[k][1][i] = (1/(dg_M[i]**(1/2)))*lmb_v_sorted[k][1][i]
 
@@ -258,7 +258,7 @@ def create_K_M(n_total, n, b, dens, area, md_elas, mat_bij, v_theta, v_l):
     # Seleciona a matriz K e a diagonal M apenas para os nós ativos
     mat_K = mat_K[0:2*n,0:2*n]
     dg_M = dg_M[0:2*n]
-
+    
     return mat_K, dg_M
 
 # Realiza os testes para o input-a ou o input-b
@@ -638,4 +638,3 @@ def qr(alpha_list, beta_list, deslocamento, v_arr):
 #Chama a função main()
 if __name__ == "__main__":
     main()
-
